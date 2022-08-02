@@ -1,7 +1,7 @@
 
 const express = require("express");
 
-
+const port = process.env.PORT || 3000
 const app = express();
 const ourword = "lucky";
 
@@ -42,4 +42,4 @@ for (let i = 0; i < word.length; i++){
 res.send(resArr);
 });
 app.use(express.static("public"));
-app.listen(3000);
+app.listen(port);
